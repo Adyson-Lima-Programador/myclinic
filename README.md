@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="" width="100" height="100"/>
+  <img src="https://github.com/Adyson-Lima-Programador/myclinic/blob/main/documentacao/logo.png" width="100" height="100"/>
 </p>
 
 # MyClinic é uma aplicação fullstack Ruby on Rails para gestão de clínicas médicas e odontológicas.
