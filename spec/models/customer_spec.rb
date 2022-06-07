@@ -43,4 +43,29 @@ RSpec.describe Customer, type: :model do
 
   end
 
+  describe "Testa validade do model Customer" do
+
+    it "Customer válido com campos obrigatórios preenchidos" do
+
+      @customer.name = "José Silva"
+      @customer.email = "jose@gmail.com"
+      @customer.cell_phone = "5591923568945"
+      @customer.cpf = "65236985478"
+      @customer.age = "65"
+
+      expect(@customer).to be_valid
+
+    end
+
+    it "Customer inválido com campos obrigatórios não preenchidos" do
+
+      customer = Customer.new
+      customer.name = "" 
+      
+      expect(customer).to be_invalid
+
+    end
+
+  end
+
 end
