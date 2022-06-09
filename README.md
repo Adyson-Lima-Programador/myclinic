@@ -8,7 +8,7 @@
 <img src="" width="100%" height="100%"/>
 
 ## Imagem com resultados do TDD do MyClinic. 
-<img src="" width="100%" height="100%"/>
+<img src="https://github.com/Adyson-Lima-Programador/myclinic/blob/main/documentacao/resultados_testes.png" width="100%" height="100%"/>
 
 # Sobre o MyClinic.
 ## MyClinic é uma aplicação fullstack feita em Ruby on Rails, que possui funcionalidades de:
