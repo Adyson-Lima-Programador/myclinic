@@ -42,5 +42,31 @@ RSpec.describe Professional, type: :model do
     end
 
   end
-  
+
+  describe "Testa validade do model professional" do
+
+    it "Professional válido com campos obrigatórios preenchidos" do
+
+      @professional.name = "José Silva"
+      @professional.email = "jose@gmail.com"
+      @professional.cell_phone = "5591923568945"
+      @professional.cpf = "65236985478"
+      @professional.specialty = "cardiologista"
+
+      expect(@professional).to be_valid
+
+    end
+
+    it "Professional inválido com campos obrigatórios não preenchidos" do
+
+      professional = Professional.new
+      professional.name = ""
+
+      expect(professional).to be_invalid
+
+    end
+
+
+  end
+
 end
