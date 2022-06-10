@@ -13,7 +13,7 @@ RSpec.describe CustomersController, type: :controller do
 
     it "SHOW retorna status 200" do
 
-      customer = Customer.create(name:"José Silva",email:"jose@gmail.com",
+      customer = Customer.create(id:1,name:"José Silva",email:"jose@gmail.com",
         cell_phone:"5591923568945", cpf:"65236985478", age:"65")
 
       get :show, params: {id: customer.id}
@@ -24,6 +24,17 @@ RSpec.describe CustomersController, type: :controller do
     it "NEW retorna status 200" do
 
       get :new
+      expect(response).to have_http_status(200)
+
+    end
+
+    it "EDIT retorna status 200" do
+
+      customer = Customer.create(id:2,name:"Carlos Silva",email:"jose@gmail.com",
+        cell_phone:"5591923568945", cpf:"65236985478", age:"65")
+
+      patch :edit, params: {id: customer.id}
+      # template edit.html.erb obrigatorio pra passar com status GREEN
       expect(response).to have_http_status(200)
 
     end
