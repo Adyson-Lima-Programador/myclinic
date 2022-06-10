@@ -23,6 +23,9 @@ class CustomersController < ApplicationController
 
   end
 
+  def show
+  end
+
 private
 
   def set_customer

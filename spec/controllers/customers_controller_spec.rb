@@ -11,6 +11,15 @@ RSpec.describe CustomersController, type: :controller do
       
     end
 
+    it "SHOW retorna status 200" do
+
+      customer = Customer.create(name:"José Silva",email:"jose@gmail.com",
+        cell_phone:"5591923568945", cpf:"65236985478", age:"65")
+
+      get :show, params: {id: customer.id}
+      
+    end
+
   end
 
 end
