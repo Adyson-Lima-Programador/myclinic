@@ -288,31 +288,13 @@ a {
   <dl style="margin-left: 15px;">
   <dt id="example_group_2" class="passed">Testa actions do controller Customers</dt>
     <script type="text/javascript">moveProgressBar('4.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">INDEX retorna status 200</span><span class='duration'>0.06604s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">INDEX retorna status 200</span><span class='duration'>0.05727s</span></dd>
     <script type="text/javascript">moveProgressBar('8.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">SHOW retorna status 200</span><span class='duration'>0.02404s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">SHOW retorna status 200</span><span class='duration'>0.01592s</span></dd>
     <script type="text/javascript">moveProgressBar('12.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">NEW retorna status 200</span><span class='duration'>0.00389s</span></dd>
-    <script type="text/javascript">makeRed('rspec-header');</script>
-    <script type="text/javascript">makeRed('div_group_2');</script>
-    <script type="text/javascript">makeRed('example_group_2');</script>
+    <dd class="example passed"><span class="passed_spec_name">NEW retorna status 200</span><span class='duration'>0.00572s</span></dd>
     <script type="text/javascript">moveProgressBar('16.0');</script>
-    <dd class="example failed">
-      <span class="failed_spec_name">EDIT retorna status 200</span>
-      <span class="duration">0.01675s</span>
-      <div class="failure" id="failure_1">
-        <div class="message"><pre>  Failure/Error: expect(response).to have_http_status(200)
-    expected the response to have status code 200 but it was 204
-  # ./spec/controllers/customers_controller_spec.rb:38:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
-        <div class="backtrace"><pre>./spec/controllers/customers_controller_spec.rb:38:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
-    <pre class="ruby"><code><span class="linenum">36</span>      patch :edit, params: {id: customer.id}
-<span class="linenum">37</span>      # template edit.html.erb obrigatorio pra passar com status GREEN
-<span class="offending"><span class="linenum">38</span>      expect(response).to have_http_status(200)</span>
-<span class="linenum">39</span>
-<span class="linenum">40</span>    end
-<span class="linenum">41</span><span class="comment"># Install the coderay gem to get syntax highlighting</span></code></pre>
-      </div>
-    </dd>
+    <dd class="example passed"><span class="passed_spec_name">EDIT retorna status 200</span><span class='duration'>0.00829s</span></dd>
   </dl>
 </div>
 <div id="div_group_3" class="example_group passed">
@@ -324,24 +306,24 @@ a {
   <dl style="margin-left: 15px;">
   <dt id="example_group_4" class="passed">Testa correto preenchimento dos campos do model Appointment</dt>
     <script type="text/javascript">moveProgressBar('20.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">date consegue ser preenchido</span><span class='duration'>0.02625s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">date consegue ser preenchido</span><span class='duration'>0.01965s</span></dd>
     <script type="text/javascript">moveProgressBar('24.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">hour consegue ser preenchido</span><span class='duration'>0.00997s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">hour consegue ser preenchido</span><span class='duration'>0.00497s</span></dd>
     <script type="text/javascript">moveProgressBar('28.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">customer consegue ser preenchido</span><span class='duration'>0.00515s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">customer consegue ser preenchido</span><span class='duration'>0.00754s</span></dd>
     <script type="text/javascript">moveProgressBar('32.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">professional consegue ser preenchido</span><span class='duration'>0.01016s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">professional consegue ser preenchido</span><span class='duration'>0.00628s</span></dd>
     <script type="text/javascript">moveProgressBar('36.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">type consegue ser preenchido</span><span class='duration'>0.00772s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">type consegue ser preenchido</span><span class='duration'>0.00393s</span></dd>
   </dl>
 </div>
 <div id="div_group_5" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_5" class="passed">Testa validade do model Appointment</dt>
     <script type="text/javascript">moveProgressBar('40.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">Appointment válido com campos obrigatórios preenchidos</span><span class='duration'>0.01675s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">Appointment válido com campos obrigatórios preenchidos</span><span class='duration'>0.02036s</span></dd>
     <script type="text/javascript">moveProgressBar('44.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">Appointment inválido com campos obrigatórios não preenchidos</span><span class='duration'>0.00689s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">Appointment inválido com campos obrigatórios não preenchidos</span><span class='duration'>0.00698s</span></dd>
   </dl>
 </div>
 <div id="div_group_6" class="example_group passed">
@@ -353,24 +335,24 @@ a {
   <dl style="margin-left: 15px;">
   <dt id="example_group_7" class="passed">Testa correto preenchimento dos campos do model Customer</dt>
     <script type="text/javascript">moveProgressBar('48.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">name consegue ser preenchido</span><span class='duration'>0.00144s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">name consegue ser preenchido</span><span class='duration'>0.00108s</span></dd>
     <script type="text/javascript">moveProgressBar('52.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">email consegue ser preenchido</span><span class='duration'>0.00128s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">email consegue ser preenchido</span><span class='duration'>0.00134s</span></dd>
     <script type="text/javascript">moveProgressBar('56.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">cell_phone consegue ser preenchido</span><span class='duration'>0.00123s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">cell_phone consegue ser preenchido</span><span class='duration'>0.00094s</span></dd>
     <script type="text/javascript">moveProgressBar('60.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">cpf consegue ser preenchido</span><span class='duration'>0.00136s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">cpf consegue ser preenchido</span><span class='duration'>0.00102s</span></dd>
     <script type="text/javascript">moveProgressBar('64.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">age consegue ser preenchido</span><span class='duration'>0.00197s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">age consegue ser preenchido</span><span class='duration'>0.00099s</span></dd>
   </dl>
 </div>
 <div id="div_group_8" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_8" class="passed">Testa validade do model Customer</dt>
     <script type="text/javascript">moveProgressBar('68.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">Customer válido com campos obrigatórios preenchidos</span><span class='duration'>0.00123s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">Customer válido com campos obrigatórios preenchidos</span><span class='duration'>0.00115s</span></dd>
     <script type="text/javascript">moveProgressBar('72.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">Customer inválido com campos obrigatórios não preenchidos</span><span class='duration'>0.00132s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">Customer inválido com campos obrigatórios não preenchidos</span><span class='duration'>0.00123s</span></dd>
   </dl>
 </div>
 <div id="div_group_9" class="example_group passed">
@@ -384,26 +366,26 @@ a {
     <script type="text/javascript">moveProgressBar('76.0');</script>
     <dd class="example passed"><span class="passed_spec_name">name consegue ser preenchido</span><span class='duration'>0.00104s</span></dd>
     <script type="text/javascript">moveProgressBar('80.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">email consegue ser preenchido</span><span class='duration'>0.00090s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">email consegue ser preenchido</span><span class='duration'>0.00105s</span></dd>
     <script type="text/javascript">moveProgressBar('84.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">cell_phone consegue ser preenchido</span><span class='duration'>0.00562s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">cell_phone consegue ser preenchido</span><span class='duration'>0.00095s</span></dd>
     <script type="text/javascript">moveProgressBar('88.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">cpf consegue ser preenchido</span><span class='duration'>0.00132s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">cpf consegue ser preenchido</span><span class='duration'>0.00093s</span></dd>
     <script type="text/javascript">moveProgressBar('92.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">specialty consegue ser preenchido</span><span class='duration'>0.01631s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">specialty consegue ser preenchido</span><span class='duration'>0.00105s</span></dd>
   </dl>
 </div>
 <div id="div_group_11" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_11" class="passed">Testa validade do model professional</dt>
     <script type="text/javascript">moveProgressBar('96.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">Professional válido com campos obrigatórios preenchidos</span><span class='duration'>0.00156s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">Professional válido com campos obrigatórios preenchidos</span><span class='duration'>0.00113s</span></dd>
     <script type="text/javascript">moveProgressBar('100.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">Professional inválido com campos obrigatórios não preenchidos</span><span class='duration'>0.00120s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">Professional inválido com campos obrigatórios não preenchidos</span><span class='duration'>0.00112s</span></dd>
   </dl>
 </div>
-<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.26276 seconds</strong>";</script>
-<script type="text/javascript">document.getElementById('totals').innerHTML = "25 examples, 1 failure";</script>
+<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.20228 seconds</strong>";</script>
+<script type="text/javascript">document.getElementById('totals').innerHTML = "25 examples, 0 failures";</script>
 </div>
 </div>
 </body>
