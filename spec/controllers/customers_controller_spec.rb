@@ -17,7 +17,15 @@ RSpec.describe CustomersController, type: :controller do
         cell_phone:"5591923568945", cpf:"65236985478", age:"65")
 
       get :show, params: {id: customer.id}
-      
+      expect(response).to have_http_status(200)
+
+    end
+
+    it "NEW retorna status 200" do
+
+      get :new
+      expect(response).to have_http_status(200)
+
     end
 
   end

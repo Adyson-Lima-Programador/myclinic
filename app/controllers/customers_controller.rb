@@ -24,6 +24,11 @@ class CustomersController < ApplicationController
   end
 
   def show
+
+  end
+
+  def new
+
   end
 
 private
