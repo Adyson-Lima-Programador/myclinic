@@ -39,9 +39,15 @@ class CustomersController < ApplicationController
 
   def create
 
-   
+    @customer = Customer.new(customer_params)
 
-
+    respond_to do |format|
+      if @customer.save
+        format.html {redirect_to customer_url(@customer), notice: "Cliente criado."}
+      else
+        format.html {render :new, status: :unprocessable_entity}
+      end
+    end
 
   end
 
