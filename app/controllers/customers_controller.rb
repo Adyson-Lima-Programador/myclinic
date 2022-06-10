@@ -34,6 +34,15 @@ class CustomersController < ApplicationController
   end
 
   def edit
+
+  end
+
+  def create
+
+   
+
+
+
   end
 
 private

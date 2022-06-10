@@ -39,6 +39,14 @@ RSpec.describe CustomersController, type: :controller do
 
     end
 
+    it "CREATE retorna status 302" do
+
+      post :create, params:{customer:{name:"José Silva",email:"jose@gmail.com",
+      cell_phone:"5591923568945", cpf:"65236985478", age:"65"}}
+      expect(response).to have_http_status(302)
+    
+    end
+
   end
 
 end
