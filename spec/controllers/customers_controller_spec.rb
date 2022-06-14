@@ -59,6 +59,16 @@ RSpec.describe CustomersController, type: :controller do
 
     end
 
+    it "DELETE retorna status 204" do
+
+      customer = Customer.create(name:"José Silva",email:"jose@gmail.com",
+        cell_phone:"5591923568945", cpf:"65236985478", age:"65")
+    
+      customer = Customer.last
+      delete :destroy, params: {id: customer.id}
+      expect(response).to have_http_status(204)
+    end
+
   end
 
 end
