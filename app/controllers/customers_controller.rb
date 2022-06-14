@@ -51,6 +51,12 @@ class CustomersController < ApplicationController
 
   end
 
+  def update
+
+    
+
+  end
+
 private
 
   def set_customer

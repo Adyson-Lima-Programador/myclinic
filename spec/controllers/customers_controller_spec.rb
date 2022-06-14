@@ -47,6 +47,18 @@ RSpec.describe CustomersController, type: :controller do
     
     end
 
+    it "UPDATE retorna status 302" do
+
+      customer = Customer.create(name:"José Silva",email:"jose@gmail.com",
+        cell_phone:"5591923568945", cpf:"65236985478", age:"65")
+
+      patch :update, params: {customer:{name:"João da Silva",email:"jose@gmail.com",
+      cell_phone:"5591923568945", cpf:"65236985478", age:"65"}, id: 1}
+
+      expect(response).to have_http_status(302)
+
+    end
+
   end
 
 end
