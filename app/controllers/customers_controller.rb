@@ -53,7 +53,15 @@ class CustomersController < ApplicationController
 
   def update
 
-    
+    respond_to do |format|
+
+      if @customer.update(customer_params)
+        format.html { redirect_to customer_url(@customer), notice: "Cliente atualizado."}      
+      else
+        format.html { render :edit, status: :unprocessable_entity}
+      end
+      
+    end
 
   end
 
