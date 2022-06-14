@@ -65,7 +65,11 @@ class CustomersController < ApplicationController
 
   end
 
+  def destroy
   
+    @customer.destroy
+
+  end
 
 private
 
