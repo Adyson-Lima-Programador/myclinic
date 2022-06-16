@@ -25,9 +25,16 @@
 
 # Tecnologias utilizadas
 
-- Ruby
-- Ruby on Rails
-- Postgresql
+- [X] Ruby
+- [X] Ruby on Rails
+- [X] Postgresql
+- [X] Git
+- [X] Testes
+- [X] Rspec
+- [X] Bootstrap
+- [X] Html 5
+- [X] CSS
+- [X] Twilio
 
 ## Implantação em produção
 - Serviço: Heroku 
