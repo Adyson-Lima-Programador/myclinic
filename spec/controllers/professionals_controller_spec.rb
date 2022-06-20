@@ -21,6 +21,13 @@ RSpec.describe ProfessionalsController, type: :controller do
 
     end
 
+    it "NEW retorna status 200" do
+
+      get :new  
+      expect(response).to have_http_status(200)
+
+    end
+
   end
 
 end

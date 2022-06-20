@@ -12,21 +12,21 @@
 
 # Sobre o MyClinic.
 ## MyClinic é uma aplicação fullstack feita em Ruby on Rails, que possui funcionalidades de:
-- Cadastro de clientes
-- Cadastro de médicos e odontólogos
-- Cadastro de consultas
-- Manual do usuário
-- Área de relatórios
-- Impressão de PDF
-- Envio de Email
-- Envio de Whatsapp
+- [X] Cadastro de clientes
+- [X] Cadastro de médicos e odontólogos
+- [X] Cadastro de consultas
+- [X] Manual do usuário
+- [X] Área de relatórios
+- [X] Impressão de PDF
+- [X] Envio de Email
+- [X] Envio de Whatsapp
  
 ## <a href="">Acesse aqui o MyClinic</a>.
 
 # Tecnologias utilizadas
 
-- [X] Ruby
-- [X] Ruby on Rails
+- [X] Ruby 3
+- [X] Ruby on Rails 7
 - [X] Postgresql
 - [X] Git
 - [X] Testes
