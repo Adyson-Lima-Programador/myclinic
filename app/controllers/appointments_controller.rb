@@ -66,6 +66,12 @@ class AppointmentsController < ApplicationController
 
   end
 
+  def destroy
+
+    @appointment.destroy
+
+  end
+
 private
 
   def set_appointment
