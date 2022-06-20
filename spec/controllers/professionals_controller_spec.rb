@@ -28,6 +28,14 @@ RSpec.describe ProfessionalsController, type: :controller do
 
     end
 
+    it "CREATE retorna status 302" do
+
+      post :create, params:{professional:{name:"João Silva",email:"joao@gmail.com",
+      cell_phone:"5591245568945", cpf:"65736985478", specialty:"cardiologist"}}
+      expect(response).to have_http_status(302)
+      
+    end
+
   end
 
 end
