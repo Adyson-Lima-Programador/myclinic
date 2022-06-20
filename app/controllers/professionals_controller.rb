@@ -51,8 +51,14 @@ class ProfessionalsController < ApplicationController
 
   def update
 
+    respond_to do |format|
+      if @professional.update(professional_params)
+        format.html { redirect_to professional_url(@professional), notice: "Profissional atualizado."}
+      else
+        format.html { render :edit, status: :unprocessable_entity}
+      end
+    end
     
-
   end
 
 
