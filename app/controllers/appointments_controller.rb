@@ -1,5 +1,7 @@
 class AppointmentsController < ApplicationController
 
+  before_action :set_appointment, only: %i[show edit update destroy]
+
   def index
 
     if(params[:date].to_s != "")
@@ -50,8 +52,19 @@ class AppointmentsController < ApplicationController
 
   end
 
-  
+  def update
 
+    respond_to do |format|
+
+      if @appointment.update(appointment_params)
+        format.html { redirect_to appointment_url(@appointment), notice: "Consulta atualizada."}      
+      else
+        format.html { render :edit, status: :unprocessable_entity}
+      end
+      
+    end
+
+  end
 
 private
 
