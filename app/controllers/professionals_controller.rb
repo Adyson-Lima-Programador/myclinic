@@ -32,7 +32,8 @@ class ProfessionalsController < ApplicationController
 
   end
 
-  
+  def edit
+  end
 
   def create
 
