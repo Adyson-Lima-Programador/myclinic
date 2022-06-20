@@ -38,7 +38,15 @@ class AppointmentsController < ApplicationController
 
   def create
 
-    
+    @appointment = Appointment.new(appointment_params)
+
+    respond_to do |format|
+      if @appointment.save
+        format.html {redirect_to appointment_url(@appointment), notice: "Consulta criada."}
+      else
+        format.html {render :new, status: :unprocessable_entity}
+      end
+    end
 
   end
 
