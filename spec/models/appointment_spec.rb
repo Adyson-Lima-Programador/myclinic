@@ -42,10 +42,10 @@ RSpec.describe Appointment, type: :model do
 
     end
 
-    it "type consegue ser preenchido" do
+    it "category consegue ser preenchido" do
 
-      @appointment.type = "return"
-      expect(@appointment.type).to eq("return")
+      @appointment.category = "return"
+      expect(@appointment.category).to eq("return")
 
     end
 
@@ -59,7 +59,7 @@ RSpec.describe Appointment, type: :model do
       @appointment.hour = "12"
       @appointment.customer_id = Customer.last.id
       @appointment.professional_id = Professional.last.id
-      @appointment.type = "return"
+      @appointment.category = "return"
 
       expect(@appointment).to be_valid
 

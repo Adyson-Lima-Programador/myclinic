@@ -11,6 +11,22 @@ RSpec.describe AppointmentsController, type: :controller do
 
     end
 
+    it "SHOW retorna status 200" do
+      
+      customer = Customer.create(id:1,name:"José Silva",email:"jose@gmail.com",
+        cell_phone:"5591923568945", cpf:"65236985478", age:"65")
+
+      professional = Professional.create(id:1,name:"Pedro Silva",email:"pedro@gmail.com",
+        cell_phone:"5591923188945", cpf:"65776985478",specialty:"cardiologista")
+      
+      appointment = Appointment.create(id:1, date:"20062022", hour:"14", customer_id:customer.id,
+        professional_id:professional.id, category:"first")  
+
+      get :show, params: {id: appointment.id}
+      expect(response).to have_http_status(200)
+
+    end
+
   end
 
 end

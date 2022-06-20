@@ -5,7 +5,7 @@ class CreateAppointments < ActiveRecord::Migration[7.0]
       t.string :hour
       t.string :customer_id
       t.string :professional_id
-      t.string :type
+      t.string :category
 
       t.timestamps
     end
