@@ -47,6 +47,14 @@ RSpec.describe AppointmentsController, type: :controller do
     
     end
 
+    it "CREATE retorna status 302" do
+
+      post :create, params:{appointment:{date:"21062022", hour:"14", customer_id:@customer.id,
+      professional_id:@professional.id, category:"return"}}
+      expect(response).to have_http_status(302)
+
+    end
+
   end
 
 end

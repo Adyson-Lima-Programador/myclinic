@@ -36,6 +36,12 @@ class AppointmentsController < ApplicationController
 
   end
 
+  def create
+
+    
+
+  end
+
 
 private
 
