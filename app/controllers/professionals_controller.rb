@@ -49,6 +49,12 @@ class ProfessionalsController < ApplicationController
   
   end
 
+  def update
+
+    
+
+  end
+
 
 private
 

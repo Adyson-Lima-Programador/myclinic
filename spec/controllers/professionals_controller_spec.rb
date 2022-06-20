@@ -45,6 +45,17 @@ RSpec.describe ProfessionalsController, type: :controller do
       
     end
 
+    it "UPDATE retorna status 302" do
+
+      professional = Professional.create(name:"Pedro Silva",email:"pedro@gmail.com",
+        cell_phone:"5591923188945", cpf:"65776985478",specialty:"cardiologist")
+      
+      patch :update, params: {professional:{name:"Luis Silva",email:"luis@gmail.com",
+      cell_phone:"5591923658945", cpf:"77776985478",specialty:"cardiologist"}, id: 1}
+      expect(response).to have_http_status(302)
+      
+    end
+
   end
 
 end
