@@ -26,6 +26,12 @@ class ProfessionalsController < ApplicationController
   def show
   end
 
+  def new
+
+    @professional = Professional.new
+    
+  end
+
 
 private
 
