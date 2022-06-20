@@ -61,6 +61,12 @@ class ProfessionalsController < ApplicationController
     
   end
 
+  def destroy
+
+    @professional.destroy
+
+  end
+
 
 private
 
