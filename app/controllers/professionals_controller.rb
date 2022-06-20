@@ -32,6 +32,8 @@ class ProfessionalsController < ApplicationController
 
   end
 
+  
+
   def create
 
     @professional = Professional.new(professional_params)
