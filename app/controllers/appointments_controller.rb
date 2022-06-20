@@ -50,6 +50,8 @@ class AppointmentsController < ApplicationController
 
   end
 
+  
+
 
 private
 

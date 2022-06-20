@@ -49,8 +49,19 @@ RSpec.describe AppointmentsController, type: :controller do
 
     it "CREATE retorna status 302" do
 
-      post :create, params:{appointment:{date:"21062022", hour:"14", customer_id:@customer.id,
+      post :create, params: {appointment:{date:"21062022", hour:"14", customer_id:@customer.id,
       professional_id:@professional.id, category:"return"}}
+      expect(response).to have_http_status(302)
+
+    end
+
+    it "UPDATE retorna status 302" do
+
+      appointment = Appointment.create(date:"20062022", hour:"14", customer_id:@customer.id,
+        professional_id:@professional.id, category:"first")
+
+      patch :update, params: {appointment:{date:"22062022", hour:"14", customer_id:@customer.id,
+      professional_id:@professional.id, category:"return"}, id:1}
       expect(response).to have_http_status(302)
 
     end
