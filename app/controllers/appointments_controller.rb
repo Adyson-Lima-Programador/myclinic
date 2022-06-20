@@ -27,8 +27,15 @@ class AppointmentsController < ApplicationController
   end
 
   def new
+
+    @appointment = Appointment.new
+
   end
-  
+
+  def edit
+
+  end
+
 
 private
 

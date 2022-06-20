@@ -30,7 +30,7 @@ RSpec.describe CustomersController, type: :controller do
 
     it "EDIT retorna status 200" do
 
-      customer = Customer.create(id:2,name:"Carlos Silva",email:"jose@gmail.com",
+      customer = Customer.create(id:1,name:"Carlos Silva",email:"jose@gmail.com",
         cell_phone:"5591923568945", cpf:"65236985478", age:"65")
 
       patch :edit, params: {id: customer.id}

@@ -38,6 +38,15 @@ RSpec.describe AppointmentsController, type: :controller do
 
     end
 
+    it "EDIT retorna status 200" do
+
+      appointment = Appointment.create(id:1, date:"21062022", hour:"14", customer_id:@customer.id,
+        professional_id:@professional.id, category:"return")
+      patch :edit, params: {id: appointment.id}
+      expect(response).to have_http_status(200)
+    
+    end
+
   end
 
 end

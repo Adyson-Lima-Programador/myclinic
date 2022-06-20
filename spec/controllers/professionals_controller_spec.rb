@@ -30,7 +30,7 @@ RSpec.describe ProfessionalsController, type: :controller do
 
     it "EDIT retorna status 200" do
 
-      professional = Professional.create(id:2,name:"Pedro Silva",email:"pedro@gmail.com",
+      professional = Professional.create(id:1,name:"Carlos Silva",email:"pedro@gmail.com",
         cell_phone:"5591923188945", cpf:"65776985478",specialty:"cardiologista")
       patch :edit, params: {id: professional.id}
       expect(response).to have_http_status(200)
