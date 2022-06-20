@@ -29,7 +29,21 @@ class ProfessionalsController < ApplicationController
   def new
 
     @professional = Professional.new
-    
+
+  end
+
+  def create
+
+    @professional = Professional.new(professional_params)
+
+    respond_to do |format|
+      if @professional.save
+        format.html { redirect_to professional_url(@professional), notice: "Profissional criado." }
+      else
+        format.html { render :new, status: :unprocessable_entity }
+      end
+    end
+  
   end
 
 
