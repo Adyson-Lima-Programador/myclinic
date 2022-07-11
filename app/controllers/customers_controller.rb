@@ -7,7 +7,7 @@ class CustomersController < ApplicationController
     if(params[:cpf].to_s != "")
 
       customer_find = Customer.where(cpf: params[:cpf])
-      @customers = Customer.where(id: customer_find).page(params[:page]).per(5)
+      @customers = Customer.where(id: customer_find)
       
     else
       
@@ -19,7 +19,11 @@ class CustomersController < ApplicationController
 
       @customers = Customer.order(:id).page(params[:page]).per(10)
     
-    end  
+    end
+    
+    @total_customers = Customer.all
+    
+    @customers_maiores_18 = Customer.where("age > '18'")
 
   end
 
@@ -68,6 +72,9 @@ class CustomersController < ApplicationController
   def destroy
   
     @customer.destroy
+    respond_to do |format|
+      format.html { redirect_to customers_url, notice: 'Cliente apagado com sucesso.' }
+    end
 
   end
 

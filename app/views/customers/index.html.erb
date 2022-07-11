@@ -1,0 +1,80 @@
+<p style="color: green"><%= notice %></p>
+
+<h3 class="titulo">Clientes</h3>
+<div class="album py-1 bg-light">   
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    <div class="col">
+      <div class="card shadow-sm ">
+        <div class="card-header text-center my-card">
+          <h4>Total de Clientes<h4>
+        </div>
+        <div class="card-body text-center my-card">
+          <h2><%= @total_customers.size %></h2>    
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm ">
+        <div class="card-header text-center my-card">
+          <h4>Clientes maiores de 18 anos<h4>
+        </div>
+        <div class="card-body text-center my-card">
+          <h2> <%= @customers_maiores_18.size %> </h2>    
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm ">
+        <%= image_tag "spider.png", class: "card-image" %>          
+      </end>
+    </div>
+  </div>    
+</div>
+
+<div class="mb-3 form-pesquisa">
+  <%= form_tag( customers_path, :method => :get, html: {class: "form-inline"}) do %>
+    <div class="row g-3 align-items-center">
+      <div class="col-auto">
+        <%= text_field_tag 'cpf', nil, class: "form-control col-md-6", pattern: "[0-9]{11}", placeholder: "11 dígitos apenas" %>      
+      </div>
+      <div class="col-auto">
+        <%= submit_tag "Pesquisar Cpf", :name => nil, class: "btn btn-primary cor-customizada" %>  
+      </div>
+      <div class="col-auto">
+        <%= link_to t('links.new'), new_customer_path, class: "btn btn-primary cor-customizada" %>
+      </div>  
+    </div>
+  <% end %>
+</div>
+<div class="table-responsive">
+  <table class="table table-hover table-sm">
+    <thead>
+      <tr>
+        <th scope="col"><%= t'.name' %></th>             
+        <th scope="col">Email</th>
+        <th scope="col"><%= t'.cell_phone' %></th>
+        <th scope="col">Cpf</th> 
+        <th scope="col"><%= t'.age' %></th>              
+        <th scope="col">Detalhes</th>
+      </tr>      
+    </thead>      
+    <tbody>
+      <% @customers.each do |customer| %>  
+      <tr>
+        <td><%= customer.name %></td>
+        <td><%= customer.email %></td>
+        <td><%= customer.cell_phone %></td>
+        <td><%= customer.cpf %></td>                
+        <td><%= customer.age %></td>
+        <td><%= link_to t('links.show'), customer, class: "btn btn-sm btn-primary cor-customizada" %></td>
+      </tr>
+      <% end %>            
+    </tbody>
+  </table>
+  <% if @customers.size > 1%>
+    <div class="centraliza">
+      <%= paginate @customers %>
+    </div>   
+  <%end%> 
+</div>  
+      

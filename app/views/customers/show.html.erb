@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+<h3 class="titulo">Detalhes do cliente</h3>
+<div class="card mb-3" > <!-- fechado em _customer.html.erb -->
+  <div class="row g-0"> <!-- fechado em _customer.html.erb -->
+    <div class="col-md-6">
+      <div class="card-body">
+        <%= render @customer %>
+      </div>
+    </div>
+
+    <div class="centraliza">
+      <%= link_to t('links.edit'), edit_customer_path(@customer), class: "btn btn-sm btn-primary cor-customizada my-link" %>
+      <%= button_to "Destroy", customer_path(@customer), class: "btn btn-sm btn-primary cor-customizada", form: { data: { turbo_confirm: "Are you sure?" }}, method: :delete %>
+    </div>
+
