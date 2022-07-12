@@ -35,6 +35,8 @@ gem "kaminari"
 gem "rails-i18n", "~> 7.0.0"
 gem "twilio-ruby"
 gem "documentos_br"
+gem "gruff"
+gem "image_magick"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
