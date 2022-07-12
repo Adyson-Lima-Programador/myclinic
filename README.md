@@ -5,7 +5,7 @@
 # MyClinic é uma aplicação fullstack Ruby on Rails para gestão de clínicas médicas e odontológicas.
 
 ## Imagens do MyClinic. 
-<img src="" width="100%" height="100%"/>
+<img src="https://github.com/Adyson-Lima-Programador/myclinic/blob/main/documentacao/imagens_telas/appgif.gif" width="100%" height="100%"/>
 
 ## Imagem com resultados do TDD do MyClinic. 
 <img src="https://github.com/Adyson-Lima-Programador/myclinic/blob/main/documentacao/resultados_testes.png" width="100%" height="100%"/>
