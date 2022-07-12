@@ -19,7 +19,10 @@ class ProfessionalsController < ApplicationController
 
       @professionals = Professional.order(:id).page(params[:page]).per(10)
     
-    end  
+    end
+    
+    @total_professionals = Professional.all
+    @professionals_clinicos = Professional.where("specialty == '1'")
 
   end
 
@@ -64,6 +67,9 @@ class ProfessionalsController < ApplicationController
   def destroy
 
     @professional.destroy
+    respond_to do |format|
+      format.html { redirect_to professionals_url, notice: 'Profissional apagado com sucesso.' }
+    end
 
   end
 

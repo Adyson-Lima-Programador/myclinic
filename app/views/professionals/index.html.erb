@@ -1,0 +1,80 @@
+<p style="color: green"><%= notice %></p>
+
+<h3 class="titulo">Profissionais</h3>
+<div class="album py-1 bg-light">   
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    <div class="col">
+      <div class="card shadow-sm ">
+        <div class="card-header text-center my-card">
+          <h4>Total de Profissionais<h4>
+        </div>
+        <div class="card-body text-center my-card">
+          <h2><%= @total_professionals.size %></h2>    
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm ">
+        <div class="card-header text-center my-card">
+          <h4>Clínicos<h4>
+        </div>
+        <div class="card-body text-center my-card">
+          <h2> <%= @professionals_clinicos.size %> </h2>    
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm ">
+        <%= image_tag "spider.png", class: "card-image" %>          
+      </end>
+    </div>
+  </div>    
+</div>
+
+<div class="mb-3 form-pesquisa">
+  <%= form_tag( professionals_path, :method => :get, html: {class: "form-inline"}) do %>
+    <div class="row g-3 align-items-center">
+      <div class="col-auto">
+        <%= text_field_tag 'cpf', nil, class: "form-control col-md-6", pattern: "[0-9]{11}", placeholder: "11 dígitos apenas" %>      
+      </div>
+      <div class="col-auto">
+        <%= submit_tag "Pesquisar Cpf", :name => nil, class: "btn btn-primary cor-customizada" %>  
+      </div>
+      <div class="col-auto">
+        <%= link_to t('links.new'), new_professional_path, class: "btn btn-primary cor-customizada" %>
+      </div>  
+    </div>
+  <% end %>
+</div>
+<div class="table-responsive">
+  <table class="table table-hover table-sm">
+    <thead>
+      <tr>
+        <th scope="col"><%= t'.name' %></th>             
+        <th scope="col">Email</th>
+        <th scope="col"><%= t'.cell_phone' %></th>
+        <th scope="col">Cpf</th> 
+        <th scope="col"><%= t'.specialty' %></th>              
+        <th scope="col">Detalhes</th>
+      </tr>      
+    </thead>      
+    <tbody>
+      <% @professionals.each do |professional| %>  
+      <tr>
+        <td><%= professional.name %></td>
+        <td><%= professional.email %></td>
+        <td><%= professional.cell_phone %></td>
+        <td><%= professional.cpf %></td>                
+        <td><%= professional.specialty %></td>
+        <td><%= link_to t('links.show'), professional, class: "btn btn-sm btn-primary cor-customizada" %></td>
+      </tr>
+      <% end %>            
+    </tbody>
+  </table>
+  <% if @professionals.size > 1%>
+    <div class="centraliza">
+      <%= paginate @professionals %>
+    </div>   
+  <%end%> 
+</div>  
+      
