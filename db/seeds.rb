@@ -17,3 +17,13 @@ require 'faker'
 
   end
   puts "Professionals gerados com sucesso!\n\n"
+
+  puts "Gerando appointments...\n\n"
+  30.times do |i|
+    # código categorias 1 = consulta, 2 = retorno
+    Appointment.create!(date: Faker::Date.between(from: '2022-01-01', to: '2022-12-31') ,
+    hour: "#{rand(8..17)}:00", customer_id: rand(1..30), professional_id: rand(1..30),
+    category: ["1","2"].sample)
+
+  end
+  puts "Appointments gerados com sucesso!\n\n"

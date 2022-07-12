@@ -66,13 +66,13 @@ RSpec.describe AppointmentsController, type: :controller do
 
     end
 
-    it "DESTROY retorn status 204" do 
+    it "DESTROY retorn status 302" do 
     
       appointment = Appointment.create(date:"20062022", hour:"14", customer_id:@customer.id,
         professional_id:@professional.id, category:"first")
       appointment = Appointment.last
       delete :destroy, params: {id: appointment.id}
-      expect(response).to have_http_status(204)
+      expect(response).to have_http_status(302)
       
     end
 

@@ -56,14 +56,14 @@ RSpec.describe ProfessionalsController, type: :controller do
       
     end
 
-    it "DESTROY retorna status 204" do
+    it "DESTROY retorna status 302" do
 
       professional = Professional.create(name:"Pedro Silva",email:"pedro@gmail.com",
         cell_phone:"5591923188945", cpf:"65776985478",specialty:"cardiologist")
       professional = Professional.last
 
       delete :destroy, params: {id: professional.id}
-      expect(response).to have_http_status(204)
+      expect(response).to have_http_status(302)
 
     end
 

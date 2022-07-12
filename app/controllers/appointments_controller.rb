@@ -4,10 +4,10 @@ class AppointmentsController < ApplicationController
 
   def index
 
-    if(params[:date].to_s != "")
+    if(params[:cpf].to_s != "")
 
-      appointment_find = Appointment.where(date: params[:date])
-      @appointments = Appointment.where(id: appointment_find).page(params[:page]).per(5)
+      customer_find = Customer.where(cpf: params[:cpf])
+      @appointments = Appointment.where(customer_id: customer_find).page(params[:page]).per(5)
       
     else
       
@@ -15,11 +15,14 @@ class AppointmentsController < ApplicationController
     
     end
 
-    if !params[:date]
+    if !params[:cpf]
 
       @appointments = Appointment.order(:id).page(params[:page]).per(10)
     
-    end  
+    end 
+    
+    @total_appointments = Appointment.all
+    @appointments_returns = Appointment.where("category == '2'")
 
 
   end
@@ -69,6 +72,9 @@ class AppointmentsController < ApplicationController
   def destroy
 
     @appointment.destroy
+    respond_to do |format|
+      format.html { redirect_to appointments_url, notice: 'Consulta apagada com sucesso.' }
+    end
 
   end
 

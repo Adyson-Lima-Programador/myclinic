@@ -1,0 +1,40 @@
+<%= form_with(model: appointment, multipart: true) do |form|  %>
+  <% if appointment.errors.any? %>
+    <div style="color: red">
+      <ul class="alert alert-danger" role="alert">
+        <% appointment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="mb-3">
+    <%= form.label :date, class: "form-label campo" %>
+    <%= form.text_field :date, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :hour, class: "form-label campo" %>
+    <%= form.text_field :hour, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :customer_id, class: "form-label campo" %>
+    <%= form.number_field :customer_id, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :professional_id, class: "form-label campo" %>
+    <%= form.number_field :professional_id, class: "form-control" %>
+  </div>  
+
+  <div class="mb-3">
+    <%= form.label :category, class: "form-label campo" %>
+    <%= form.text_field :category, class: "form-control" %>
+  </div>
+
+  <div class="mb-3 centraliza">
+    <%= form.submit "Salvar", class: "btn btn-sm btn-primary cor-customizada" %>
+  <div/>
+<% end %>
