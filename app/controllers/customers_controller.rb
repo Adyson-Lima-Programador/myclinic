@@ -50,7 +50,7 @@ class CustomersController < ApplicationController
     respond_to do |format|
       if @customer.save
         # SendSms.new("Parabéns #{@customer.name}, você foi cadastrado no MyClinic!", @customer.cell_phone).call
-        # UserMailer.create_update_user_mailer("Parabéns #{@customer.name}, você foi cadastrado no MyClinic!", @customer.email).deliver_now
+        ContactMailer.contact_email(@customer).deliver_now
         format.html {redirect_to customer_url(@customer), notice: "Cliente criado."}
       else
         format.html {render :new, status: :unprocessable_entity}

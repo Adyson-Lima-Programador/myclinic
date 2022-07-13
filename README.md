@@ -19,7 +19,7 @@
 - [X] Área de relatórios
 - [X] Impressão de PDF
 - [X] Envio de Email
-- [X] Envio de Whatsapp
+- [X] Envio de SMS
  
 ## <a href="">Acesse aqui o MyClinic</a>.
 
