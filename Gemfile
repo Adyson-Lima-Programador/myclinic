@@ -37,6 +37,7 @@ gem "twilio-ruby"
 gem "documentos_br"
 gem "gruff"
 gem "image_magick"
+gem 'prawn-rails'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"

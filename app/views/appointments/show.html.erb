@@ -10,6 +10,7 @@
 
     <div class="centraliza">
       <%= link_to t('links.edit'), edit_appointment_path(@appointment), class: "btn btn-sm btn-primary cor-customizada my-link" %>
-      <%= button_to "Destroy", appointment_path(@appointment), class: "btn btn-sm btn-primary cor-customizada", form: { data: { turbo_confirm: "Are you sure?" }}, method: :delete %>
+      <%= link_to 'Print', appointment_path(format: :pdf), target: "_blank",class: "btn btn-sm btn-primary cor-customizada my-link" %>
+      <%= button_to "Destroy", appointment_path(@appointment), class: "btn btn-sm btn-primary cor-customizada my-link", form: { data: { turbo_confirm: "Are you sure?" }}, method: :delete %>
     </div>
 
