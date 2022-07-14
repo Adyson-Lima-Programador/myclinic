@@ -10,6 +10,6 @@
 
     <div class="centraliza">
       <%= link_to t('links.edit'), edit_customer_path(@customer), class: "btn btn-sm btn-primary cor-customizada my-link" %>
-      <%= button_to "Destroy", customer_path(@customer), class: "btn btn-sm btn-primary cor-customizada", form: { data: { turbo_confirm: "Are you sure?" }}, method: :delete %>
+      <%= button_to "Apagar", customer_path(@customer), class: "btn btn-sm btn-primary cor-customizada", form: { data: { turbo_confirm: "Esta ação não pode ser desfeita, deseja continuar?" }}, method: :delete %>
     </div>
 
