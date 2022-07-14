@@ -19,9 +19,9 @@ pt-BR:
   professionals:
     index:
       name: Nome
-      phone: Telefone
+      cell_phone: Telefone
       cpf: CPF
-      class_number: Conselho
+      specialty: Especialidade
     show:
       name: Nome
       phone: Telefone
@@ -29,10 +29,11 @@ pt-BR:
       email: Email
   appointments:
     index:
-      customer: Cliente
-      professional: Profissional
+      customer_id: Cliente
+      professional_id: Profissional
       date: Data
       hour: Hora
+      category: Tipo consulta
     show:
       client: Cliente
       professional: Profissional
