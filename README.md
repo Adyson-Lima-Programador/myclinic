@@ -29,7 +29,6 @@
 - [X] Ruby on Rails 7
 - [X] Postgresql
 - [X] Git
-- [X] Testes
 - [X] Rspec
 - [X] Bootstrap
 - [X] Html 5
